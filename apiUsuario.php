@@ -15,7 +15,7 @@ class ApiUsuarios{
                 $item=array(
                     "id" => $row['id'],
                     "login" => $row['login'],
-                    "contraseña" => $row['contraseña'],
+                    "contrasena" => $row['contrasena'],
                     "nombre" => $row['nombre'],
                     "apellido" => $row['apellido'],
                     "nacimiento" => $row['nacimiento'],
@@ -51,7 +51,7 @@ class ApiUsuarios{
                 $item=array(
                     "id" => $row['id'],
                     "login" => $row['login'],
-                    "contraseña" => $row['contraseña'],
+                    "contrasena" => $row['contrasena'],
                     "nombre" => $row['nombre'],
                     "apellido" => $row['apellido'],
                     "nacimiento" => $row['nacimiento'],
@@ -78,7 +78,7 @@ class ApiUsuarios{
 
     function pintarJSON($array){
 
-        echo '<code>'. json_encode($array). '</code>';
+        echo json_encode($array);
 
     }
 
