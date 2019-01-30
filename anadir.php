@@ -4,7 +4,8 @@
     $api = new ApiUsuarios();
 
         $item = array(
-                "login" => $_POST["login"],
+            
+                "login" => $_POST['login'],
                 'contrasena' => $_POST['contrasena'],
                 'nombre' => $_POST['nombre'],
                 'apellido' => $_POST['apellido'],

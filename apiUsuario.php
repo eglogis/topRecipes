@@ -84,7 +84,7 @@ class ApiUsuarios{
 
     function error($mensaje){
 
-        echo '<code>'. json_encode(array('mensaje' => $mensaje)). '</code>';
+        echo json_encode(array('mensaje' => $mensaje));
 
     }
 
