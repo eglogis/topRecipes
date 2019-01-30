@@ -87,5 +87,19 @@ class ApiUsuarios{
         echo '<code>'. json_encode(array('mensaje' => $mensaje)). '</code>';
 
     }
+
+    function add($item){
+
+        $usuario = new Usuario();
+
+        $res = $usuario->nuevoUsuario($item);
+
+        $this->exito('nuevo usuario registrado');
+    }
+
+    function exito($mensaje){
+
+        echo json_encode(array('mensaje' => $mensaje));
+    }
 }
 ?>

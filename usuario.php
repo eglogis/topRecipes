@@ -16,5 +16,16 @@ class Usuario extends DB{
 
         return $query;
     }
+
+    function nuevoUsuario($usuario){
+
+    	$query = $this->connect()->prepare('INSERT INTO usuarios (login, contrasena, nombre, apellido, nacimiento, correo, latitud, altitud, telefono, foto, comentarios) VALUES (:login, :contrasena, :nombre, :apellido, :nacimiento, :correo, :latitud, :altitud, :telefono, :foto, :comentarios)');
+    	
+        $query->execute(['login' => $usuario['login'], 'contrasena' => $usuario['contrasena'], 'nombre' => $usuario['nombre'], 'apellido' => $usuario['apellido'], 'nacimiento' => $usuario['nacimiento'],'correo' => $usuario['correo'], 'latitud' => $usuario['latitud'], 'altitud' => $usuario['altitud'], 'telefono' => $usuario['telefono'], 'foto' => $usuario['foto'], 'comentarios' => $usuario['comentarios'],]);
+
+        return $query;
+    }
+
+
 }
 ?>
