@@ -3,7 +3,7 @@
 	include_once 'apiUsuario.php';
     $api = new ApiUsuarios();
 
-        /*$item = array(
+        $item = array(
             
                 "login" => $_POST['login'],
                 'contrasena' => $_POST['contrasena'],
@@ -18,9 +18,9 @@
                 'comentarios' => $_POST['comentarios']
             );
 
-         $api->add($item);*/
+         $api->add($item);
 
-         if($api->subirImagen($_FILES['foto'])){
+         /*if($api->subirImagen($_FILES['foto'])){
 
          $item = array(
             
@@ -40,5 +40,5 @@
          $api->add($item);
      }else{
             $api->error('Error con el archivo: ' . $api->getError());
-        }
+        }*/
 ?>
