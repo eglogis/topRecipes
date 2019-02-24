@@ -110,6 +110,7 @@ class ApiUsuarios{
         $directorio = "imagenes/";
 
         $this->imagen = basename($file["name"]);
+        
         $archivo = $directorio . basename($file["name"]);
 
         $tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
